@@ -25,26 +25,10 @@
                 "conditions": []
             },
             {
-                "action": "phpunit",
+                "action": "./vendor/phpunit/phpunit/phpunit",
                 "options": [],
                 "conditions": []
             }
         ]
-    },
-    "prepare-commit-msg": {
-        "enabled": false,
-        "actions": []
-    },
-    "post-commit": {
-        "enabled": false,
-        "actions": []
-    },
-    "post-merge": {
-        "enabled": false,
-        "actions": []
-    },
-    "post-checkout": {
-        "enabled": false,
-        "actions": []
     }
 }
