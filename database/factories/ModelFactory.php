@@ -11,9 +11,10 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Fruit::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'email' => $faker->email,
+        'season' => $faker->word,
+        'description'  => $faker->text
     ];
 });

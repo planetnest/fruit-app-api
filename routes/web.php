@@ -11,6 +11,18 @@
 |
 */
 
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// The Routes are versioned as v1
+
+$router->group(['prefix'=>'api/v1'], function() use($router){
+$router->get('/fruits', 'FruitController@index');
+$router->post('/fruit', 'FruitController@create');
+$router->get('/fruit/{id}', 'FruitController@show');
+$router->put('/fruit/{id}', 'FruitController@update');
+$router->delete('/fruit/{id}', 'FruitController@destroy');
+});
+
